@@ -1,7 +1,36 @@
 body {
     background-color: bisque;
 }
+h1{
+    padding: auto;
+}
 
 h2 {
     text-align: center;
+}
+
+hr {
+    width: 1300px;
+}
+
+form {
+    margin-top: -1px;
+}
+#section-1{
+    width: 1300px;
+    height: 70px;
+    background-color: green;
+}
+ fieldset ul li {
+    list-style-type: none;                       /* remove bullets*/
+    padding: 0;                                  /* remove padding*/
+    margin: 0;                                   /* remove margin*/
+    border: 1px solid #ddd;                    /* Add a thin border to each list item*/
+    margin-top: -1px;                            /* prevent double borders*/
+    background-color: #f6f6f6;                 /* add a grey background color*/
+    padding: 12px;                               /*add some padding*/
+}
+.container{
+    width: 750px;
+    margin-right: auto;
 }
