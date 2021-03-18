@@ -20,8 +20,13 @@ hr {
     width: 1300px;
 }
 
-form {
+form input {
     margin-top: -1px;
+    padding: 12px;
+    border: 1px solid #ddd; 
+    margin-top: -1px;   
+   
+    
 }
 #section-1{
     width: 1300px;
