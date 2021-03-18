@@ -3,10 +3,17 @@ body {
 }
 h1{
     padding: auto;
+    margin-top : 50px;
+    margin-left: 20px;
 }
 
 h2 {
     text-align: center;
+}
+
+h3{
+    margin-left: 40px ;
+    margin-top: 40px;
 }
 
 hr {
@@ -30,7 +37,4 @@ form {
     background-color: #f6f6f6;                 /* add a grey background color*/
     padding: 12px;                               /*add some padding*/
 }
-.container{
-    width: 750px;
-    margin-right: auto;
-}
+
