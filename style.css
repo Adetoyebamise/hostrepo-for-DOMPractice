@@ -28,12 +28,14 @@ form input {
    
     
 }
-#section-1{
+#sectionOne{
     width: 1300px;
     height: 70px;
     background-color: green;
     margin-bottom: 40px;
     margin-left:5px;
+    text-align: justify;
+    
 }
  fieldset ul li {
     list-style-type: none;                       /* remove bullets*/
@@ -42,6 +44,7 @@ form input {
     border: 1px solid #ddd;                    /* Add a thin border to each list item*/
     margin-top: -1px;                            /* prevent double borders*/
     background-color: #f6f6f6;                 /* add a grey background color*/
-    padding: 12px;                               /*add some padding*/
+    padding: 12px;   
+    margin-right: 40px;                           /*add some padding*/
 }
 
