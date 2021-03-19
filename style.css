@@ -1,9 +1,9 @@
 body {
     background-color: bisque;
 }
-h1{
+section h1{
     padding: auto;
-    margin-top : 50px;
+    margin-top : 50 px;
     margin-left: 20px;
 }
 
@@ -32,6 +32,8 @@ form input {
     width: 1300px;
     height: 70px;
     background-color: green;
+    margin-bottom: 40px;
+    margin-left:5px;
 }
  fieldset ul li {
     list-style-type: none;                       /* remove bullets*/
