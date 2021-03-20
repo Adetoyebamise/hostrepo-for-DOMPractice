@@ -12,7 +12,7 @@
    };
 
   const replyItemOneFeedback = () => {
-   unorderedItemListOne.innerText = 'You selected an item';
+   unorderedItemListOne.innerText = 'You added an item';
    };
 
   const showOutputFeedback = () => {
