@@ -1,42 +1,50 @@
 body {
     background-color: bisque;
-}
-section h1{
+    }
+section {
     padding: auto;
     margin-top : 50 px;
     margin-left: 20px;
-}
+    padding-top: 20px;
+    padding-bottom: 20px;
+    }
+
+h1{
+    padding-left: 15px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+  }
 
 h2 {
     text-align: center;
-}
+   }
 
 h3{
     margin-left: 40px ;
     margin-top: 40px;
-}
+  }
 
 hr {
     width: 1300px;
-}
+  }
 
 form input {
     margin-top: -1px;
     padding: 12px;
     border: 1px solid #ddd; 
     margin-top: -1px;   
-   
-    
-}
-#sectionOne{
+  }
+
+#oneHashtag {
     width: 1300px;
-    height: 70px;
+    height: 30px;
     background-color: green;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     margin-left:5px;
     text-align: justify;
-    
-}
+    }
+
  fieldset ul li {
     list-style-type: none;                       /* remove bullets*/
     padding: 0;                                  /* remove padding*/
@@ -46,5 +54,9 @@ form input {
     background-color: #f6f6f6;                 /* add a grey background color*/
     padding: 12px;   
     margin-right: 40px;                           /*add some padding*/
-}
+    }
 
+ .output {
+    margin-top: 10px    ;
+    }
+ 
