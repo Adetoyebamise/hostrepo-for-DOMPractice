@@ -6,7 +6,7 @@
 //  Query selector for the Submitt button
   const submitButton =document.querySelector('#submitButton');
 
-//  Functions to run the program
+//  Functions to change the output text when the click here button is click.
   const giveClickHereFeedback = () => {
    outputDiv.innerText = 'Please Enter the form above ';
    };
@@ -23,19 +23,23 @@
  const unorderedItemListTwo = document.querySelector('#unorderedItemList > ul:nth-child(1) > li:nth-child(2)');
 
   const tellItemTwoFeedback = () => {
-   unorderedItemListTwo.innerText = 'You selected the second Item'
+   unorderedItemListTwo.innerText = 'You added the second Item'
     };
 // Declare variable and function for item three
    const unorderedItemListThree = document.querySelector('#unorderedItemList > ul:nth-child(1) > li:nth-child(3)');
 
   const reportItemThreeFeedback = () => {
-   unorderedItemListThree.innerText = 'You selected an your third Item'
+   unorderedItemListThree.innerText = 'You added the third Item'
    };
 // Declare variable and function for item four
    const unorderedItemListFour = document.querySelector('#unorderedItemList > ul:nth-child(1) > li:nth-child(4)');
 
   const sendItemFourFeedback = () => {
-   unorderedItemListFour.innerText = 'You can only buy Four Items'
+   unorderedItemListFour.innerText = 'You added the fourth Items'
+    };
+
+    const showOutputFeedbackItemSelection = () => {
+      outputDiv.innerText = 'You can only add four items';
     };
 
 // Event Listener Method for submit and click Here button.
@@ -53,3 +57,5 @@
   submitButton.addEventListener('click', reportItemThreeFeedback);
 
   submitButton.addEventListener('click', sendItemFourFeedback);
+
+  submitButton.addEventListener('click', showOutputFeedbackItemSelection);
