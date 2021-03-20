@@ -105,7 +105,7 @@
 
 //  items.style.backgroundColor = "#f4f4f4"
 
-//  for (var i; i < items.length; i++) {
+//  for ( i; i < items.length; i++) {
 //      items[i].style.backgroundColor = '#f4f4f4'
 //        }
 
@@ -119,7 +119,7 @@
 //  li[1].style.backgroundColor = ""
 //  items.style.backgroundColor = "#f4f4f4"
 
-//  for (var i; i < li.length; i++) {
+//  for ( i; i < li.length; i++) {
 //     li[i].style.backgroundColor = '#f4f4f4'
 //        }
 
@@ -153,7 +153,7 @@
 //  const odd = document.querSelectorAll('li:nth-child(odd)')
 //  const even = document.querSelectorAll('li:nth-child(even)')
 
-//  for (var i = 0; i < odd.length; i++) {
+//  for ( i = 0; i < odd.length; i++) {
 //      odd[i].style.backgroundColor = '#f4f4f4'
 //      even[i].style.backgroundColor = '#ccc'
 //        }
