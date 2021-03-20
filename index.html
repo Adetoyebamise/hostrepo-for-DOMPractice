@@ -8,35 +8,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
  <body >
-   <section id = "sectionOne">
-     <h1>Item Lister</h1>
-    </section>
+     <div id="oneHashtag"><h1> Item Lister</h1></div>
      <p>
-       <section id="listItem">
+       <section class="list-group" id="listGroup">
+         <button class="click-me-button" id="clickMeButton"> click here</button>
          <fieldset>
-          <legend><h2> <strong>Add Items</strong> </h2></legend>
-         <form id="updateItem">
-           <input type="text" placeholder="enter item to buy">
-           <input type="button" value="submit">
-         </form>
-         <section >
-          <h3>Items</h3>
-           <div class="output-item  ">   
-         <ul>
-         <li>Item 1</li>
-         <li>Item 2</li>
-         <li>Item 3</li>
-         <li>Item 4</li>
-        </ul>
-          </div>
-         </section>
-       </fieldset>
+            <legend><h2> <strong>Add and Buy Items</strong> </h2></legend>
+           <form>
+            <input type="text" placeholder="enter item to buy">
+            <div class="submit-button" id="submitButton"><input type="button" value="submit">
+            </div>
+           </form>
+            <div class="output">Output Here</div>
+              <h3>Items</h3>
+              <div class="unordered-item-list" id="unorderedItemList">   
+                <ul>
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li> 
+                  <li>Item 4</li>
+                </ul>
+              </div>
+          </fieldset>
        </section>
-       </p>
      </p>
-   </section>
-  <section id = "sectionTwo">
-    <hr>
+<hr>
+  <section id = "sectionClasswork">
   <h1>Understanding JavaScript with Don </h1>
   <h4> Functions : Work It Out</h4>
    <P> Work it out is a mathematical Experiment where we Write a function that expects 3 arguments when called.
