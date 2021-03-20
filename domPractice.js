@@ -35,7 +35,7 @@
    const unorderedItemListFour = document.querySelector('#unorderedItemList > ul:nth-child(1) > li:nth-child(4)');
 
   const sendItemFourFeedback = () => {
-   unorderedItemListFour.innerText = 'You added the fourth Items'
+   unorderedItemListFour.innerText = 'You added the fourth Item'
     };
 
     const showOutputFeedbackItemSelection = () => {
