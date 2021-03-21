@@ -2,6 +2,7 @@
   const clickMeButton= document.querySelector('.click-me-button');
   const outputDiv = document.querySelector('.output');
   const unorderedItemListOne = document.querySelector('#unorderedItemList > ul:nth-child(1) > li:nth-child(1)');
+  const nameInputField = document.querySelector('.item-input');
 
 //  Query selector for the Submitt button
   const submitButton =document.querySelector('#submitButton');
@@ -12,7 +13,7 @@
    };
 
   const replyItemOneFeedback = () => {
-   unorderedItemListOne.innerText = 'You added an item';
+   unorderedItemListOne.innerText = nameInputField.value ;
    };
 
   const showOutputFeedback = () => {
@@ -23,19 +24,19 @@
  const unorderedItemListTwo = document.querySelector('#unorderedItemList > ul:nth-child(1) > li:nth-child(2)');
 
   const tellItemTwoFeedback = () => {
-   unorderedItemListTwo.innerText = 'You added the second Item'
+   unorderedItemListTwo.innerText = nameInputField.value ;
     };
 // Declare variable and function for item three
    const unorderedItemListThree = document.querySelector('#unorderedItemList > ul:nth-child(1) > li:nth-child(3)');
 
   const reportItemThreeFeedback = () => {
-   unorderedItemListThree.innerText = 'You added the third Item'
+   unorderedItemListThree.innerText = nameInputField.value ;
    };
 // Declare variable and function for item four
    const unorderedItemListFour = document.querySelector('#unorderedItemList > ul:nth-child(1) > li:nth-child(4)');
 
   const sendItemFourFeedback = () => {
-   unorderedItemListFour.innerText = 'You added the fourth Item'
+   unorderedItemListFour.innerText = nameInputField.value ;
     };
 
     const showOutputFeedbackItemSelection = () => {
@@ -62,10 +63,10 @@
 
 
 
-               /*  DOCUMENT OBJECT MODEL ASSIGNMENT */
+               /* ===  DOCUMENT OBJECT MODEL ASSIGNMENT  ===  */
 
 
-               /* Examine the Document Model        */
+               /* ===  Examine the Document Model     ===   */
  
 //  console.dir(document);    //shows us all of the different property and method in the document
 //  console.log(document);
