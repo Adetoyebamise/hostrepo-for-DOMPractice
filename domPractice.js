@@ -66,7 +66,7 @@
                /* ===  DOCUMENT OBJECT MODEL ASSIGNMENT  ===  */
 
 
-               /* ===  Examine the Document Model     ===   */
+               /* ====  Examine the Document Model     ====   */
  
 //  console.dir(document);    //shows us all of the different property and method in the document
 //  console.log(document);
