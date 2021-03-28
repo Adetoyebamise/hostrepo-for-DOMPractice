@@ -106,8 +106,8 @@
 
   items.style.backgroundColor = "#f4f4f4"
 
-  for ( i; i < items.length; i++) {
-     items[i].style.backgroundColor = '#f4f4f4'
+  for ( index; index < items.length; index++) {
+     items[index].style.backgroundColor = '#f4f4f4'
        }
 
                /*  METHOD TO QUERY THE DOM c. getElementByTagName */
@@ -120,7 +120,7 @@
   li[1].style.backgroundColor = ""
   items.style.backgroundColor = "#f4f4f4"
 
-  for ( i; i < li.length; i++) {
+  for ( index; index < li.length; i++) {
     li[i].style.backgroundColor = '#f4f4f4'
        }
 
@@ -154,63 +154,63 @@
   const odd = document.querSelectorAll('li:nth-child(odd)')
   const even = document.querSelectorAll('li:nth-child(even)')
 
-  for ( i = 0; i < odd.length; i++) {
-     odd[i].style.backgroundColor = '#f4f4f4'
-     even[i].style.backgroundColor = '#ccc'
+  for ( index = 0; index < odd.length; i++) {
+     odd[index].style.backgroundColor = '#f4f4f4'
+     even[index].style.backgroundColor = '#ccc'
        }
 
                /*   Tranversing the DOM     */
 
   const itemList = document.querySelector('#items');
 
-               /*   parentNode  */
+               /*   parentNode              */
 
   console.log(itemList.parentNode);
   itemList.parentNode.style.backgroundColor = '#f4f4f4'
   console.log(itemList.parentNode.parentNode.parentNode)
 
 
-               /*    parentElement */
+               /*    parentElement          */
 
   console.log(itemList.parentElement);
   itemList.parentElement.style.backgroundColor = '#f4f4f4'
   console.log(itemList.parentElement.parentElement.parentElement)
 
 
-               /*    childnode     */
+               /*    childnode              */
 
   console.log(itemList.childNodes)
   console.log(itemList.children)
   console.log(itemList.children[1])
   itemList.children[1].style.backgroundColor = 'yellow'
 
-               /*    FirstChild    */
+               /*    FirstChild             */
 
   console.log(itemList.firstChild)
  
-               /*    FirstElementChild   */
+               /*    FirstElementChild      */
 
   console.log(itemList.firstElementChild)
   itemList.firstElementChild.textContent = ''
 
-               /* lastChild    */
+               /* lastChild                 */
 
   console.log(itemList.lastChild)
  
-               /* lastElementChild    */
+               /* lastElementChild          */
 
   console.log(itemList.lastElementChild)
   itemList.lastElementChild.textContent = ''
 
-               /*  nextSiblings  */
+               /*  nextSiblings             */
 
   console.log(itemList.nextSibling)
 
-               /* nextElementSibling    */
+               /* nextElementSibling        */
 
   console.log(itemList.nextElementSibling)
 
-               /* previousSibling     */
+               /* previousSibling           */
 
   console.log(itemList.previousSibling)
 
