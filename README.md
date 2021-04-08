@@ -1,3 +1,3 @@
 #### javascript-DOMTwo
 
-https://adetoyebamise.github.io/hostrepo-for-DOMPractice/
+[Functional todo list: version 1](https://adetoyebamise.github.io/hostrepo-for-DOMPractice/)
