@@ -1,61 +1,85 @@
 body {
     background-color: bisque;
-    }
+}
+
 section {
-    padding: auto;
-    margin-top : 50 px;
     margin-left: 20px;
     padding-top: 20px;
-    padding-bottom: 20px;
-    }
+    padding-bottom: 20px;   
+}
 
-h1{
-    padding-left: 15px;
-    margin-right: 50px;
-    margin-bottom: 50px;
-    padding-bottom: 50px;
-  }
-
-h2 {
-    text-align: center;
-   }
+legend{
+  margin-left: auto;
+  margin-right: auto;
+}
 
 h3{
     margin-left: 40px ;
     margin-top: 40px;
-  }
+}
 
-hr {
-    width: 1300px;
-  }
-
-form input {
-    margin-top: -1px;
-    padding: 12px;
-    border: 1px solid #ddd; 
-    margin-top: -1px;   
-  }
+#itemInput {
+    padding: 12px 12px 12px 12px;
+    width:400px;
+}
 
 #oneHashtag {
-    width: 1300px;
-    height: 50px;
-    background-color: green;
-    margin-bottom: 10px;
-    margin-left:5px;
-    text-align: justify;
-    }
+    background-color: rgb(58, 161, 58);
+    padding : 20px 20px 20px 20px;
+}
 
- fieldset ul li {
-    list-style-type: none;                   /* remove bullets*/                                 
-    margin: 0;                               /* remove margin*/
-    border: 1px solid #ddd;                /* Add a thin border to each list item*/
-    margin-top: -1px;                        /* prevent double borders*/
+#submitButton {
+    padding: 12px 12px 12px 12px;
+    align-content: center;
+}
+
+fieldset ul li {
+    list-style-type: none;                   /* remove bullets*/
     background-color: #f6f6f6;             /* add a grey background color*/
-    padding: 12px;                           /* padding*/
-    margin-right: 40px;                      /*add some padding*/
-    }
+    padding: 12px 12px 12px 32px ;
+    margin-right: 40px;
+}
 
- .output {
-    margin-top: 10px    ;
-    }
- 
+.button-container {
+    float: right;
+}
+
+.major-content-container {
+    visibility : hidden ;
+}
+
+.show-container {
+    visibility: visible;
+}
+
+.independent-container {
+    visibility: visible;
+}
+
+.item-list-group{
+    visibility: visible;
+}
+
+.clear-items{
+    text-align: center;
+}
+
+.unordered-item-list {
+    visibility: visible;
+} 
+
+.output-alert {
+    margin: 40px; 
+    text-align: center; 
+    visibility: hidden;
+} 
+
+.output-alert-danger {
+    color: black ;
+    background-color: rgb(241, 163, 178);
+}
+
+.output-alert-success{
+    color: black;
+    background-color: rgb(207, 238, 153);
+}
