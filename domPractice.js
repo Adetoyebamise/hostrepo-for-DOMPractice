@@ -1,13 +1,13 @@
 // declaring variable: querySelector Method
-  const itemInput = document.querySelector("#itemInput")
+  const itemInput = document.querySelector("#itemInput");
   const submitButton = document.querySelector("#submitButton");
-  const clearItems = document.querySelector(".clear-items");
+  const clearButton = document.querySelector(".clear-items");
   const form = document.querySelector(".form-container");
   const independentContainer = document.querySelector(".independent-container");
   const majorContainer = document.querySelector(".major-content-container");
   const outputDisplay = document.querySelector(".output-alert");
   const targetItem = document.querySelector(".unordered-item-list > ul:nth-child(1) > li:nth-child(1)");
-  
+
 // edit option
   let editElement;
   let editingFlag = false;
@@ -16,9 +16,9 @@
 // event listeners
   submitButton.addEventListener("click", addItem)
 // clear items event listeners
-  clearItems.addEventListener("click", clearItem);
+  clearButton.addEventListener("click", clearItem);
 // load Items
-window.addEventListener("DOMContentLoaded", setupItem);
+  window.addEventListener("DOMContentLoaded", setupItem);
 // functions
   function addItem(eventObject) {
     eventObject.preventDefault();
@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", setupItem);
   const uniqueId = new Date().getTime();
   if (value  && !editingFlag) {
     createListItem(uniqueId, value)
-  //   // display output
+    // display output
     displayOutput("Item added to the list", "success");
     // show container
     majorContainer.classList.add("show-container");
@@ -51,7 +51,7 @@ window.addEventListener("DOMContentLoaded", setupItem);
   function displayOutput(text, action) {
     outputDisplay.textContent = text;
     outputDisplay.classList.add(`output-alert-${action}`);
-  // remove alert within a specific period 
+  // remove alert within a specific period
   setTimeout(function removeOutputDisplay() {
     outputDisplay.textContent = "";
     outputDisplay.classList.remove(`output-alert-${action}`)
@@ -94,40 +94,35 @@ window.addEventListener("DOMContentLoaded", setupItem);
   // set form value
   itemInput.value = editElement.textContent;
   editingFlag = true;
-
   editID = element.dataset.id;
   submitButton.value = "edit";
   };
 
 // set back to default
   function setBackToDefault() {
-    itemInput.value = ""; 
+    itemInput.value = "";
     editingFlag = false;
     editID = "";
     submitButton.value = "submit";
-    console.log("set back to default"); 
   };
 
-// local storage
+// local storage : localStorage API
   function addToLocalStorage(uniqueId, value){
     const listGroup = {uniqueId:uniqueId, value:value};
     // let items = localStorage.getItems("targetItem");
-     let items = localStorage.getItem("targetItem")? JSON.parse(localStorage.getItem("targetItem")) : [];
-     console.log(items);
+     let items = localStorage.getItem("targetItem")? JSON.parse(localStorage.getItem("targetItem")) : [];  // getItem
      items.push(listGroup);
     localStorage.setItem("targetItem", JSON.stringify(items));
-    
-    //console.log("added to local storage")
   };
+  // remove Item
   function removeFromLocalStorage(uniqueId) {
     let items = getLocalStorage();
-
     items = items.filter(function(item){
       if(item.uniqueId !== uniqueId){
         return item;
       }
     })
-    localStorage.setItem("targetItem", JSON.stringify(items));
+    localStorage.setItem("targetItem", JSON.stringify(items));    // setItem
   };
   function editLocalStorage(uniqueId, value){
     let items = getLocalStorage();
@@ -142,15 +137,13 @@ window.addEventListener("DOMContentLoaded", setupItem);
   function getLocalStorage(){
     return localStorage.getItem("targetItem")? JSON.parse(localStorage.getItem("targetItem")) : [];
   };
-// localStorage API
-// setItem
-// getItem
-// removeItem
-//save as strings
-  // localStorage.setItem("orange", JSON.stringify(["item1", "item2"]));
-  // const oranges =  JSON.parse(localStorage.getItem("orange"));
-  // console.log(oranges);
-  // localStorage.removeItem("orange");
+
+  /*  Examples on saving as strings
+    localStorage.setItem("orange", JSON.stringify(["item1", "item2"]));
+    const oranges =  JSON.parse(localStorage.getItem("orange"));
+    console.log(oranges);
+    localStorage.removeItem("orange");  */
+
 // ===== setup items   ====
   function setupItem() {
     let items = getLocalStorage();
@@ -161,7 +154,6 @@ window.addEventListener("DOMContentLoaded", setupItem);
       majorContainer.classList.add("show.container");
     }
   };
-
   function createListItem(uniqueId, value) {
     // create element
    const element = document.createElement("div");
@@ -173,10 +165,10 @@ window.addEventListener("DOMContentLoaded", setupItem);
    element.setAttributeNode(attr);
    element.innerHTML = `
     <ul>
-      <li>${value} 
-        <div class="button-container"> 
-        <input type ="button" class= "edit-button" value = "Edit Item"> 
-        <input type ="button" class= "delete-button" value = "Delete Item"> 
+      <li>${value}
+        <div class="button-container">
+        <input type ="button" class= "edit-button" value = "Edit Item">
+        <input type ="button" class= "delete-button" value = "Delete Item">
         </div>
       </li>
     </ul>
@@ -186,44 +178,43 @@ window.addEventListener("DOMContentLoaded", setupItem);
      deleteButton.addEventListener("click", deleteItem);
      const editButton = element.querySelector(".edit-button");
      editButton.addEventListener("click", editItem);
-    // append child 
+    // append child
     independentContainer.appendChild(element);
   }
 
-/* ==========     Exercise  ========== */
-// select class characters with document.querySelector
-// const findCharacters = document.querySelectorAll(".characters");
-// console.log(findCharacters);
-// // select class humans from class characters
-// const findHuman = document.querySelector(".humans");
-// console.log(findHuman);
-// // select all humans with querySelectorAll, starting from humans
-// const findHumanAgain = document.querySelectorAll(".humans");
-// const allHumans = findHumanAgain[0].children;
-// console.log(findHumanAgain[0]);
-// console.log(allHumans);
-// // select all hobbit with children
-// const findHobbits = document.querySelector(".hobbits")
-// console.log(findHobbits);
-// console.log((document.querySelectorAll(".hobbits")[0].children));
-// // Select the Merry (the hobbit)
-// console.log(findHobbits.children[2]);
-// // Select .enemies from Sauron
-// const findEnemies = document.querySelector(".enemies");
-// console.log(findEnemies.children[0].parentElement);
-// // Select the .characters div from Nazgûl
-// console.log(findEnemies.children[1].parentElement.parentElement);
-// // Select Elrond from Glorfindel
-// const findElves = document.querySelector(".elves");
-// console.log(findElves);
-// const selectingElrond = findElves.children;
-// console.log(selectingElrond); //returns HTML collection
-// const cherrypickingElrond = findElves.children[2];
-// console.log(cherrypickingElrond); //return the element
-// console.log(cherrypickingElrond.previousElementSibling);
-// // Select Legolas from Glorfindel
-// const selectingGlorfindel = cherrypickingElrond ;
-// console.log(selectingGlorfindel.previousElementSibling.previousElementSibling);
-
-// // Select Arwen from Glorfindel
-// console.log(findElves.children[1].nextElementSibling.nextElementSibling);
+  /* ==========     Exercise  ==========
+  select class characters with document.querySelector
+  const findCharacters = document.querySelectorAll(".characters");
+  console.log(findCharacters);
+  select class humans from class characters
+  const findHuman = document.querySelector(".humans");
+  console.log(findHuman);
+  select all humans with querySelectorAll, starting from humans
+  const findHumanAgain = document.querySelectorAll(".humans");
+  const allHumans = findHumanAgain[0].children;
+  console.log(findHumanAgain[0]);
+  console.log(allHumans);
+  select all hobbit with children
+  const findHobbits = document.querySelector(".hobbits")
+  console.log(findHobbits);
+  console.log((document.querySelectorAll(".hobbits")[0].children));
+  Select the Merry (the hobbit)
+  console.log(findHobbits.children[2]);
+  Select .enemies from Sauron
+  const findEnemies = document.querySelector(".enemies");
+  console.log(findEnemies.children[0].parentElement);
+  Select the .characters div from Nazgûl
+  console.log(findEnemies.children[1].parentElement.parentElement);
+  Select Elrond from Glorfindel
+  const findElves = document.querySelector(".elves");
+  console.log(findElves);
+  const selectingElrond = findElves.children;
+  console.log(selectingElrond); //returns HTML collection
+  const cherrypickingElrond = findElves.children[2];
+  console.log(cherrypickingElrond); //return the element
+  console.log(cherrypickingElrond.previousElementSibling);
+  Select Legolas from Glorfindel
+  const selectingGlorfindel = cherrypickingElrond ;
+  console.log(selectingGlorfindel.previousElementSibling.previousElementSibling);
+  Select Arwen from Glorfindel
+  console.log(findElves.children[1].nextElementSibling.nextElementSibling);  */

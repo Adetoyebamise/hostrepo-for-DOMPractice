@@ -1,84 +1,68 @@
 body {
     background-color: bisque;
 }
-
 section {
     margin-left: 20px;
     padding-top: 20px;
     padding-bottom: 20px;   
 }
-
 legend{
   margin-left: auto;
   margin-right: auto;
 }
-
 h3{
     margin-left: 40px ;
     margin-top: 40px;
 }
-
 #itemInput {
     padding: 12px 12px 12px 12px;
     width:400px;
 }
-
 #oneHashtag {
     background-color: rgb(58, 161, 58);
     padding : 20px 20px 20px 20px;
 }
-
 #submitButton {
     padding: 12px 12px 12px 12px;
     align-content: center;
 }
-
 fieldset ul li {
-    list-style-type: none;                   /* remove bullets*/
-    background-color: #f6f6f6;             /* add a grey background color*/
+    list-style-type: none;
+    background-color: #f6f6f6;
     padding: 12px 12px 12px 32px ;
     margin-right: 40px;
 }
-
 .button-container {
     float: right;
 }
-
 .major-content-container {
-    visibility : hidden ;
+    visibility : visible ;
 }
-
 .show-container {
     visibility: visible;
 }
-
 .independent-container {
     visibility: visible;
 }
-
 .item-list-group{
     visibility: visible;
 }
-
 .clear-items{
     text-align: center;
+    visibility: visible;
 }
-
 .unordered-item-list {
     visibility: visible;
 } 
-
 .output-alert {
     margin: 40px; 
     text-align: center; 
-    visibility: hidden;
+    visibility: visible;
 } 
-
 .output-alert-danger {
     color: black ;
     background-color: rgb(241, 163, 178);
 }
-
 .output-alert-success{
     color: black;
     background-color: rgb(207, 238, 153);
